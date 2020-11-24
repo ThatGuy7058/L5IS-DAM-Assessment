@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+      * {
+          box-sizing: border-box;
+        }
+        body {
+          margin: 0;
+        }
+        /* Style the header */
         .header {
           padding: 10px;
           text-align: center;
@@ -14,76 +21,95 @@
           padding: 10px;
           text-align: left;
         }
-        .container {
-          max-width: 100%;
-          margin: auto;
-          background: #f2f2f2;
-          overflow: auto;
-          
+        /* Style the top navigation bar */
+        .topnav {
+          overflow: hidden;
+          background-color: #333;
         }
-        .gallery {
-          margin: 5px;
-          border: 1px solid #222222;
+        /* Style the topnav links */
+        .topnav a {
           float: left;
-          width: 200px;
-        }
-        .gallery img {
-          width: 100%;
-          height: auto;
-          border: 1px solid #ccc;
-        }
-        .desc {
-          padding: 15px;
+          display: block;
+          color: #f2f2f2;
           text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        /* Change color on hover */
+        .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+        /* Create three equal columns that floats next to each other */
+        .column {
+          text-align: center;
+          float: left;
+          padding: 10px;
+        }
+        /* Left and right column */
+        .column.side {
+          width: 25%;
+        }
+        /* middle column */
+        .column.middle {
+          width: 50%;
+        }
+        /* Clear floats after the columns */
+        .row:after {
+          
+          content: "";
+          display: table;
+          clear: both;
+        }
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        @media screen and (max-width:600px) {
+          .column {
+            width: 100%;
+          }
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <img src="https://document-export.canva.com/C8Jw8/DAEN5BC8Jw8/68/thumbnail/qnirX8ZTwoPDMkfhHUqoLQ-0001-13301743822.png" width="200px">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/The_Westfield_Group_logo.svg/1200px-The_Westfield_Group_logo.svg.png" width="200px">
         <h1>Making tech easy</h1>
     </div>
 
-    <div class="container">
-
-      <div class="gallery">
-        <img src="https://www.pbtech.co.nz/imgprod/M/P/MPHAPP4311705__1.jpg?h=7361712">
-        <div class="desc">---<br>Price: $348.99</div>
+    <div class="row">
+      <div class="column side">
+        <h2>McDonald's</h2>
+        <img src="https://synthetron.com/wp-content/uploads/2019/02/2000px-McDonalds_logo.svg_.png" width="200px">
+        <p>---</p>
+        <br><h2>Paper Plus</h2>
+        <img src="https://paperplus-cdn.freetls.fastly.net/modules/custom/images/logo.png" width="400px">
+        <p>---</p>
+        <br><h2>The Warehouse</h2>
+        <img src="https://6mrryw3n7m-flywheel.netdna-ssl.com/wp-content/uploads/2017/11/logo-warehouse.png" width="400px">
+        <p>---</p>
       </div>
-
-      <div class="gallery">
-        <img src="https://www.pbtech.co.nz/imgprod/N/B/NBKHNB4694066__1.jpg?h=2109773220">
-        <div class="desc">---<br>Price: $1,362.82</div>
+      
+      <div class="column middle">
+        <h2>Burger King</h2>
+        <img src="https://cdn.buttercms.com/DTDbj71VT0GRkb4jPYai" width="400px">
+        <p>---</p>
+        <br><h2>KFC</h2>
+        <img src="https://pngimg.com/uploads/kfc/kfc_PNG2.png" width="400px">
+        <p>---</p>
+        <br><h2>EB Games</h2>
+        <img src="https://futurefive.co.nz/uploads/story/2017/09/12/ebgames.jpg" width="400px">
+        <p>---</p>
       </div>
-
-      <div class="gallery">
-        <img src="https://www.pbtech.co.nz/imgprod/T/A/TABAPP1512811__1.jpg?h=2919255772">
-        <div class="desc">---<br>Price: $749.00</div>
-      </div>
-
-      <div class="gallery">
-        <img src="https://www.pbtech.co.nz/imgprod/M/S/MSEMST2574747__6.jpg?h=448761858">
-        <div class="desc">---<br>Price: $24.99</div>
-      </div>
-
-      <div class="gallery">
-        <img src="https://www.pbtech.co.nz/imgprod/K/E/KEYLOG1533521__2.jpg?h=808273293">
-        <div class="desc">---<br>Price: $48.99</div>
-      </div>
-
-      <div class="gallery">
-        <img src="https://www.pbtech.co.nz/imgprod/H/S/HSTLOG2073415__3.jpg?h=1672082272">
-        <div class="desc">---<br>Price: $65.00</div>
-      </div>
-
-      <div class="gallery">
-        <img src="https://www.pbtech.co.nz/imgprod/M/E/MEMHPC0001__2.jpg?h=2956329410">
-        <div class="desc">---<br>Price: $6.78</div>
-      </div>
-
-      <div class="gallery">
-        <img src="https://www.pbtech.co.nz/imgprod/C/A/CAMLOG1857536__5.jpg?h=2916031261">
-        <div class="desc">---<br>Price: $218.99</div>
+      
+      <div class="column side">
+        <h2>Farmers</h2>
+        <img src="https://silverdalemall.co.nz/wp-content/uploads/2018/03/farmers.jpg" width="200px">
+        <p>---</p>
+        <br><h2>Hallenstein Brothers</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Hallenstein_brothers_organisation_logo.gif" width="400px">
+        <p>---</p>
+        <br><h2>Whitcoulls</h2>
+        <img src="https://whitcoulls-co-nz.imgix.net/images/logo-dtret.png?fit=fillmax&auto=format" width="400px">
+        <p>---</p>
       </div>
     </div>
 
